@@ -1,34 +1,53 @@
-*, 
+*,
 *::before,
 *::after {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 30px;
 }
 
-nav.nav {
+.grid-container {
+    height: 100vh;
+    border: 10px solid green;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-areas: 
+    "nav nav header"
+    "main main ads" 
+    "footer footer footer";
+    grid-template-rows: 100px 1fr 60px;
+    grid-template-columns: 20% 1fr 15%; */
+
+    /* Theh code below is the above "commented" code but in short hand */
+    grid-template: 
+    "nav nav header" 100px 
+    "main main ads" 1fr
+    "footer footer footer" 60px 
+    / 20% 1fr 15%;
 }
 
-nav a:link, nav a:visited {
-    font-size: 1.3em;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    text-decoration: none;
-    color: white;
-    background-color: black;
+.grid-item {
+    background-color: gray;
+    border: 4px solid orange;
+    padding: 20px;
 }
 
-nav a:hover, nav a:active {
-        font-size: 1.3em;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    text-decoration: none;
-    color: black;
-    background-color: white;
+.item-1 {
+    grid-area: header;
 }
 
-header h1 {
-    grid-column-start: 5;
+.item-2 {
+    grid-area: nav;
+}
+
+.item-3 {
+    grid-area: main;
+}
+
+.item-4 {
+    grid-area: ads;
+}
+
+.item-5 {
+    grid-area: footer;
 }
