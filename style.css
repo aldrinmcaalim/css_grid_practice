@@ -1,0 +1,34 @@
+*, 
+*::before,
+*::after {
+    margin: 0;
+}
+
+nav.nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+nav a:link, nav a:visited {
+    font-size: 1.3em;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+}
+
+nav a:hover, nav a:active {
+        font-size: 1.3em;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+
+header h1 {
+    grid-column-start: 5;
+}
